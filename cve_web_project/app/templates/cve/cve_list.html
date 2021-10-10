@@ -1,0 +1,7 @@
+{% if cve_list %}
+    <ul>
+    {% for cve in cve_list %}
+        <li>{{ cve.cve_number }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}

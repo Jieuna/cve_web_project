@@ -1,0 +1,24 @@
+#e3f2fd
+
+.ex-layout{
+	width: 500px;
+}
+.ex-layout .gnb{
+	padding: 15px;
+	background-color: #ddd;
+}
+.ex-layout .main{
+	background-color: white;
+}
+.ex-layout .main:after{ clear: both; display: block; content: '' }
+
+.ex-layout .main .lnb{
+	float: left;
+	width: 100px;
+	height: 100vh;
+	background-color: #e3f2fd;
+}
+.ex-layout .main .content{
+	float: left;
+	width: 400px;
+}
