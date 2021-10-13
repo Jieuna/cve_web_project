@@ -1,24 +1,55 @@
 #e3f2fd
 
 .ex-layout{
-	width: 500px;
+    width: 500px;
+    text-indent: 10px;
 }
-.ex-layout .gnb{
-	padding: 15px;
-	background-color: #ddd;
-}
+/*.ex-layout .gnb{
+    padding: 15px;
+    background-color: #ddd;
+}*/
 .ex-layout .main{
-	background-color: white;
+    background-color: white;
+    margin: 0px auto
+    padding: 0;
+    font-family:"맑은 고딕";
+    font-size:0.9em;
+    display: #000000;
 }
-.ex-layout .main:after{ clear: both; display: block; content: '' }
+.ex-layout .main:after{
+    clear: both; display: block; content: ''
+}
 
-.ex-layout .main .lnb{
-	float: left;
-	width: 100px;
-	height: 100vh;
-	background-color: #e3f2fd;
+.ex-layout .main .menu{
+    padding: 15px;
+    float: left;
+    width: 200px;
+    height: 100vh;
+    background-color: #e3f2fd;
 }
+
 .ex-layout .main .content{
-	float: left;
-	width: 400px;
+    float: left;
+    width: 400px;
 }
+
+.ex-layout .main .menu li {
+    list-style-type: none;
+    height: 25px;
+}
+
+.ex-layout .main .menu a {
+    text-decoration: none;
+    color: #323232;
+    display: block;
+    width: 130px;
+}
+
+.ex-layout .main .menu li :hover {
+    color: #D24C7F;
+}
+
+.ex-layout .main .menu li :active a{
+    color: #BE245;
+}
+

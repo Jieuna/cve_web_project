@@ -13,4 +13,4 @@ def hello():
 @bp.route('/')
 def index():
     #return redirect(url_for('cve._list'))
-    return render_template('test/test_list.html')
+    return render_template('main/main_page.html')

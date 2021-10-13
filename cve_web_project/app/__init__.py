@@ -18,8 +18,9 @@ def create_app():
     from . import models
 
     # 블루프린트
-    from .views import main_view, cve_list_view
+    from .views import main_view, cve_list_view, malware_view
     app.register_blueprint(main_view.bp)
     app.register_blueprint(cve_list_view.bp)
+    app.register_blueprint(malware_view.bp)
 
     return app
