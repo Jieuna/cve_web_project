@@ -29,6 +29,7 @@
 }
 
 .ex-layout .main .content{
+    margin: 30px;
     float: left;
     width: 400px;
 }
@@ -53,3 +54,8 @@
     color: #BE245;
 }
 
+.ex-layout .main .content form{
+    padding: 1em;
+    position: absolute;
+    right: 250px;
+}
