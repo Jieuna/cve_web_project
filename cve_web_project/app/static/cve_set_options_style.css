@@ -1,0 +1,15 @@
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{background-color:#dae8fc;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0la{background-color:#dae8fc;text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-0lay{text-align:center;vertical-align:top}
+
+.ex-layout .main .content .button_ct {
+  position: absolute;
+  left: 600px;
+  padding: 20px;
+}

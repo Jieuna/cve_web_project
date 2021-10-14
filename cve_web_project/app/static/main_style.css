@@ -54,8 +54,12 @@
     color: #BE245;
 }
 
-.ex-layout .main .content form{
+/*.ex-layout .main .content form{
     padding: 1em;
     position: absolute;
     right: 250px;
+}*/
+
+p{
+    font-size: 1.2em;
 }
