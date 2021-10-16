@@ -3,6 +3,8 @@
 		"no" : "1",
 		"number" : "CVE-2021-26411",
 		"summary" : "Internet Explorer",
+		"type" : "javascript",
+		"extension" : "html",
 		"options" : ["attacker_ip", "target_ip"],
 		"example" : ["10.10.0.5", "10.10.0.8"]
 	},
@@ -10,6 +12,8 @@
 		"no" : "2",
 		"number" : "CVE-2021-36934",
 		"summary" : "Windows Elevation of Privilege",
+		"type" : "C",
+		"extension" : "exe",
 		"options" : ["attacker_ip", "target_ip"],
 		"example" : ["10.10.0.5", "10.10.0.8"]
 	},
@@ -17,6 +21,8 @@
 		"no" : "3",
 		"number" : "CVE-2021-34527",
 		"summary" : "PrintNightmare",
+		"type" : "C",
+		"extension" : "exe",
 		"options" : ["attacker_ip","target_ip","username", "password"],
 		"example" : ["10.10.0.5", "10.10.0.8", "hello", "1234"]
 	},
@@ -24,6 +30,8 @@
 		"no" : "4",
 		"number" : "CVE-2021-41773",
 		"summary" : "Apache",
+		"type" : "C",
+		"extension" : "exe",
 		"options" : ["attacker_ip", "target_ip"],
 		"example" : ["10.10.0.5", "10.10.0.8"]
 	},
@@ -31,6 +39,8 @@
 		"no" : "5",
 		"number" : "CVE-2021-22005",
 		"summary" : "VMWare vCenter",
+		"type" : "C",
+		"extension" : "exe",
 		"options" : ["attacker_ip", "target_ip"],
 		"example" : ["10.10.0.5", "10.10.0.8"]
 	}

@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("Hello World!\n");
+	printf("<opt1>\n");
+	printf("<opt2>\n");
+	return 0;
+}
