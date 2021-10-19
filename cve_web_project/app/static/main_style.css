@@ -63,3 +63,9 @@
 p{
     font-size: 1.2em;
 }
+
+.ex-layout .main .content_2{
+    margin: 30px;
+    float: left;
+    width: 400px;
+}
