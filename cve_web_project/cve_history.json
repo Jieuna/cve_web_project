@@ -1,0 +1,24 @@
+{
+	"211021_1119_CVE-2021-26411": {
+		"number": "CVE-2021-26411",
+		"options": {
+			"attacker_ip": "a",
+			"target_ip": "a"
+		}
+	},
+	"211021_1130_CVE-2021-26411": {
+		"number": "CVE-2021-26411",
+		"options": {
+			"attacker_ip": "1234",
+			"target_ip": "1234"
+		}
+	},
+	"211021_1422_CVE-2021-26411": {
+		"number": "CVE-2021-26411",
+		"date": "2021-10-21",
+		"options": {
+			"attacker_ip": "test",
+			"target_ip": "test"
+		}
+	}
+}

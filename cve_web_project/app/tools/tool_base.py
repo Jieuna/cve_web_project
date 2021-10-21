@@ -1,6 +1,6 @@
 from app.tools.interface import *
 
-import subprocess, datetime
+import subprocess, datetime, json
 
 
 def read_module(fname):
@@ -31,7 +31,9 @@ def drop_file(module_name, options, data):
         loc_proc = drop_file_binary(code=insert_option(malware_code, options), out_name=out_name,
                                     extension=data['extension'])
 
-        # 3. 처리 결과 파일의 위치를 반환함
+    # 3. 제작 이력 저장
+    save_malware_history(module_name, options, out_name)
+        # 4. 처리 결과 파일의 위치를 반환함
     return loc_proc
 
 
@@ -89,3 +91,18 @@ def drop_file_c(code, out_name, extension):
     res = subprocess.call(command)
 
     return out_name
+
+
+# 제적한 파일 저장
+def save_malware_history(module_name, data, output_name):
+    history = dict()
+    with open('cve_history.json', 'r', encoding='utf-8') as file:
+        history = json.load(file)
+    save_data = dict()
+    save_data["number"] = module_name
+    save_data["date"] = datetime.datetime.now().strftime('%Y-%m-%d')
+    save_data["options"] = data
+    history[output_name] = save_data
+
+    with open('cve_history.json', 'w', encoding='utf-8') as make_file:
+        json.dump(history, make_file, indent="\t")

@@ -24,7 +24,7 @@
     padding: 15px;
     float: left;
     width: 200px;
-    height: 100vh;
+    height: 98vh;
     background-color: #e3f2fd;
 }
 
@@ -32,6 +32,7 @@
     margin: 30px;
     float: left;
     width: 400px;
+    height: 90vh;
 }
 
 .ex-layout .main .menu li {
@@ -68,4 +69,14 @@ p{
     margin: 30px;
     float: left;
     width: 400px;
+    height: 90vh;
+}
+
+.ex-layout .main .team_name{
+    padding: 0px;
+    position: absolute;
+    top: 5px;
+    right: 200px;
+    font-size: 1em;
+    color: gray;
 }

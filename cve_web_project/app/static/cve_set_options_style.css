@@ -13,3 +13,7 @@
   left: 600px;
   padding: 20px;
 }
+
+.ex-layout .main .content_2 .code{
+position: absolute; right: 250px; width: 500px; top: 160px;padding: 10px; background-color:#ffefde;
+}
