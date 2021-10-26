@@ -1,47 +1,56 @@
 {"CVE_info":[
-	{
-		"no" : "1",
-		"number" : "CVE-2021-26411",
-		"summary" : "Internet Explorer",
-		"type" : "javascript",
-		"extension" : "html",
-		"options" : ["attacker_ip", "target_ip"],
-		"example" : ["10.10.0.5", "10.10.0.8"]
-	},
-	{
-		"no" : "2",
-		"number" : "CVE-2021-36934",
-		"summary" : "Windows Elevation of Privilege",
-		"type" : "C",
-		"extension" : "exe",
-		"options" : ["attacker_ip", "target_ip"],
-		"example" : ["10.10.0.5", "10.10.0.8"]
-	},
-	{
-		"no" : "3",
-		"number" : "CVE-2021-34527",
-		"summary" : "PrintNightmare",
-		"type" : "C",
-		"extension" : "exe",
-		"options" : ["attacker_ip","target_ip","username", "password"],
-		"example" : ["10.10.0.5", "10.10.0.8", "hello", "1234"]
-	},
-	{
-		"no" : "4",
-		"number" : "CVE-2021-41773",
-		"summary" : "Apache",
-		"type" : "C",
-		"extension" : "exe",
-		"options" : ["attacker_ip", "target_ip"],
-		"example" : ["10.10.0.5", "10.10.0.8"]
-	},
-	{
-		"no" : "5",
-		"number" : "CVE-2021-22005",
-		"summary" : "VMWare vCenter",
-		"type" : "C",
-		"extension" : "exe",
-		"options" : ["attacker_ip", "target_ip"],
-		"example" : ["10.10.0.5", "10.10.0.8"]
-	}
+    {
+        "no" : "1",
+        "number" : "CVE-2021-26411",
+        "summary" : "Internet Explorer 메모리 손상 취약점 - Internet Explorer에서 파싱과 렌더링을 처리하는 mshtml 라이브러리에서 발견된 UAF 취약점",
+        "type" : "javascript",
+        "extension" : "html",
+        "options" : [],
+        "example" : []
+    },
+    {
+        "no" : "2",
+        "number" : "CVE-2021-36934",
+        "summary" : "windows 권한 상승 취약점 - SAM(보안 계정 관리자) 데이터베이스를 포함하여 여러 시스템 파일에 대한 과도한 허용 ACL(액세스 제어 목록)으로 인해 권한 상승 취약성",
+        "type" : "python_script",
+        "extension" : "exe",
+        "options" : ["filename", "target_ip", "username", "password"],
+        "example" : ["C:\\Windows\\System32\\Config\\SAM", "10.10.0.13", "admin", "passwd"]
+    },
+    {
+        "no" : "3",
+        "number" : "CVE-2021-34527",
+        "summary" : "PrintNightmare - MS 윈도우 print spooler 권한검증이 미흡하여 발생하는 RCE(원격코드실행) 취약점",
+        "type" : "python_script",
+        "extension" : "exe",
+        "options" : ["target_ip","username", "password", "smb_dll_file"],
+        "example" : ["192.168.10.5", "hello", "1234", "\\192.168.10.8\\smb\\rev.dll"]
+    },
+    {
+        "no" : "4",
+        "number" : "CVE-2021-41773",
+        "summary" : "Apache HTTP Server Path Traversal 취약점 - Apache HTTP Server 2.4.49의 경로 탐색 및 파일 공개 취약점",
+        "type" : "python_script",
+        "extension" : "exe",
+        "options" : ["target_addr", "target_port"],
+        "example" : ["10.10.0.5", "80"]
+    },
+    {
+        "no" : "5",
+        "number" : "CVE-2020-6418",
+        "summary" : "Google Chrome 80 type confusion 취약점 - float 배열(float_rel)의 길이를 손상시키며, 이는 인접 메모리에서 범위를 벗어난 읽기 및 쓰기에 사용",
+        "type" : "resource_script",
+        "extension" : "rc",
+        "options" : ["SRVHOST"],
+        "example" : ["10.10.0.10"]
+    },
+    {
+        "no" : "6",
+        "number" : "CVE-2019-0708",
+        "summary" : "bluekeep 취약점 - 공격자가 특별하게 조작된 RDP 패킷을 전송하여 피해 시스템에 임의 코드를 실행할 수 있는 취약점",
+        "type" : "resource_script",
+        "extension" : "rc",
+        "options" : ["RHOSTS"],
+        "example" : ["10.10.0.7"]
+    }
 ]}

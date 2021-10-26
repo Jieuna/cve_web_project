@@ -2,6 +2,11 @@ from app.tools.interface import *
 
 import subprocess, datetime, json
 
+json_data = dict()
+with open("cve_info.json", 'r', encoding="UTF-8") as json_file:
+    json_data = json.load(json_file)
+cve_list = json_data["CVE_info"]
+
 
 def read_module(fname):
     module_data = {}
@@ -12,10 +17,15 @@ def read_module(fname):
     return data
 
 
-def drop_file(module_name, options, data):
+def drop_file(module_name, options):
     loc_proc = "/error"
     str_now = datetime.datetime.strftime(datetime.datetime.now(), "%y%m%d_%H%M")
 
+    data = dict()
+    for cve in cve_list:
+        if module_name == cve["number"]:
+            data = cve
+    print(data)
     # 1. 선택한 모듈의 정보 읽기
     out_name = "{}_{}".format(str_now, module_name)
     malware_code = read_module(module_name)
@@ -30,6 +40,9 @@ def drop_file(module_name, options, data):
     if data['type'] == 'binary':
         loc_proc = drop_file_binary(code=insert_option(malware_code, options), out_name=out_name,
                                     extension=data['extension'])
+    if data['type'] == 'resource_script':
+        print(options)
+        loc_proc = drop_file_rc(code=insert_option(malware_code, options), out_name=out_name)
 
     # 3. 제작 이력 저장
     save_malware_history(module_name, options, out_name)
@@ -91,6 +104,17 @@ def drop_file_c(code, out_name, extension):
     res = subprocess.call(command)
 
     return out_name
+
+# rc 파일 만들기
+def drop_file_rc(code, out_name):
+    print("DROP resource script FILE")
+
+    fname = NAME_CODE_RC.format(out_name)
+    with open(LOC_TMP + fname, 'wb') as fp:
+        fp.write(code)
+
+    print("DROP resource script END")
+    return fname
 
 
 # 제적한 파일 저장

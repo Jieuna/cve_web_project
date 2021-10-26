@@ -13,7 +13,13 @@
   left: 600px;
   padding: 20px;
 }
-
 .ex-layout .main .content_2 .code{
 position: absolute; right: 250px; width: 500px; top: 160px;padding: 10px; background-color:#ffefde;
+}
+
+.ex-layout .main .content_2 p {
+position: absolute; right: 443px; top: 100px;padding: 10px;
+font-size: 1.1em;
+color: #6E6E6E;
+font-weight:bold;
 }
